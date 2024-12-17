@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Tutoring Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Math Tutoring Services</h1>
+    <p>Empowering students with the skills they need to succeed!</p>
+  </header>
+
+  <main>
+    <section id="packages">
+      <h2>Semester Packages</h2>
+      <div class="package">
+        <h3>Algebra Essentials</h3>
+        <p>12-week program covering linear equations, inequalities, and polynomials.</p>
+        <p><strong>Days:</strong> Saturdays | <strong>Max Students:</strong> 10</p>
+        <p><strong>Price:</strong> $300</p>
+        <button onclick="register('Algebra Essentials')">Register</button>
+      </div>
+      <div class="package">
+        <h3>Geometry Basics</h3>
+        <p>12-week program focusing on shapes, angles, and theorems.</p>
+        <p><strong>Days:</strong> Sundays | <strong>Max Students:</strong> 10</p>
+        <p><strong>Price:</strong> $300</p>
+        <button onclick="register('Geometry Basics')">Register</button>
+      </div>
+      <div class="package">
+        <h3>Calculus Fundamentals</h3>
+        <p>12-week program exploring limits, derivatives, and integrals.</p>
+        <p><strong>Days:</strong> Saturdays | <strong>Max Students:</strong> 10</p>
+        <p><strong>Price:</strong> $400</p>
+        <button onclick="register('Calculus Fundamentals')">Register</button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Math Tutoring Services. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
