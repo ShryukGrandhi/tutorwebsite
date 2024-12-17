@@ -1,47 +1,120 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f9;
+    background-color: #f9f9f9;
     color: #333;
   }
   
   header {
-    background: #007bff;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-  }
-  
-  header nav {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #007bff;
+    color: white;
   }
   
-  header nav a {
+  header .logo h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  header nav ul li {
+    margin: 0;
+  }
+  
+  header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
   }
   
-  header nav a:hover {
+  header nav ul li a:hover {
     text-decoration: underline;
   }
   
-  main {
-    margin: 2rem auto;
-    max-width: 800px;
-    padding: 1rem;
+  /* Hero Section */
+  .hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
   }
   
+  .hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-btn {
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  .cta-btn:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Services Section */
+  .services {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  .services h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Footer */
   footer {
     text-align: center;
-    margin-top: 2rem;
-    padding: 1rem 0;
-    background: #333;
+    padding: 1rem;
+    background-color: #007bff;
     color: white;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: underline;
   }
   
