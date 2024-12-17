@@ -9,9 +9,26 @@ body {
   
   header {
     background: #007bff;
-    color: #fff;
+    color: white;
     padding: 1rem 0;
     text-align: center;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  header nav a:hover {
+    text-decoration: underline;
   }
   
   main {
@@ -20,52 +37,11 @@ body {
     padding: 1rem;
   }
   
-  #packages {
-    margin-bottom: 2rem;
-  }
-  
-  .package {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .package h3 {
-    margin-top: 0;
-  }
-  
-  button {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background: #0056b3;
-  }
-  
-  form {
-    background: #fff;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  form label {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  form input, form textarea, form button {
-    width: 100%;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    background: #333;
+    color: white;
   }
   
