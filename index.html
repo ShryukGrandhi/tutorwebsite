@@ -1,54 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Math Tutoring Services</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Math Tutoring</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stripe-js/1.52.1/stripe.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <h1>Math Tutor Pro</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="payment.html">Payment</a></li>
-      </ul>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">Elite Math</a>
+            <div class="nav-links">
+                <a href="index.html#courses">Courses</a>
+                <a href="about.html">About</a>
+                <a href="payment.html">Payment</a>
+                <a href="#enroll" class="btn btn-primary">Enroll Now</a>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h2>Achieve Your Math Goals</h2>
-      <p>Expert tutoring tailored to help you excel in all areas of mathematics.</p>
-      <a href="about.html" class="cta-btn">Learn More</a>
+    <section class="hero">
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <h1>Excel in Mathematics</h1>
+            <p>Join our expert-led semester programs for comprehensive math education</p>
+            <a href="#courses" class="btn btn-primary">
+                View Courses
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Courses</h2>
+            <p>Choose from our semester-long programs tailored to your level</p>
+        </div>
+
+        <div class="courses" id="courses">
+            <div class="course-card">
+                <div class="course-header">
+                    <h3>Elementary Math</h3>
+                    <p>Perfect for grades 3-5</p>
+                </div>
+                <div class="course-content">
+                    <div class="course-info">
+                        <i class="far fa-clock"></i>
+                        <span>Saturdays 9:00 - 10:00 AM</span>
+                    </div>
+                    <div class="course-info">
+                        <i class="fas fa-users"></i>
+                        <span>Max 10 students</span>
+                    </div>
+                    <div class="price">
+                        $450 <span>/semester</span>
+                    </div>
+                    <button class="btn btn-secondary enroll-btn" data-course="Elementary Math">
+                        Enroll Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <h3>Pre-Algebra</h3>
+                    <p>Perfect for grades 6-7</p>
+                </div>
+                <div class="course-content">
+                    <div class="course-info">
+                        <i class="far fa-clock"></i>
+                        <span>Saturdays 10:30 - 11:30 AM</span>
+                    </div>
+                    <div class="course-info">
+                        <i class="fas fa-users"></i>
+                        <span>Max 10 students</span>
+                    </div>
+                    <div class="price">
+                        $500 <span>/semester</span>
+                    </div>
+                    <button class="btn btn-secondary enroll-btn" data-course="Pre-Algebra">
+                        Enroll Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <h3>Algebra 1</h3>
+                    <p>Perfect for grades 8-9</p>
+                </div>
+                <div class="course-content">
+                    <div class="course-info">
+                        <i class="far fa-clock"></i>
+                        <span>Sundays 9:00 - 10:00 AM</span>
+                    </div>
+                    <div class="course-info">
+                        <i class="fas fa-users"></i>
+                        <span>Max 10 students</span>
+                    </div>
+                    <div class="price">
+                        $500 <span>/semester</span>
+                    </div>
+                    <button class="btn btn-secondary enroll-btn" data-course="Algebra 1">
+                        Enroll Now
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
 
-  <section class="services">
-    <h2>Our Services</h2>
-    <div class="service-cards">
-      <div class="card">
-        <h3>1-on-1 Tutoring</h3>
-        <p>Personalized sessions designed to meet individual needs.</p>
-      </div>
-      <div class="card">
-        <h3>Group Classes</h3>
-        <p>Small classes (up to 10 students) every Saturday and Sunday.</p>
-      </div>
-      <div class="card">
-        <h3>Comprehensive Packages</h3>
-        <p>Semester-long courses with a focus on Algebra, Geometry, and Calculus.</p>
-      </div>
+    <div class="enrollment-form">
+        <h2>Enroll in <span class="selected-course"></span></h2>
+        <form id="enrollment-form">
+            <div class="form-group">
+                <label for="parent-name">Parent's Name</label>
+                <input type="text" id="parent-name" required>
+            </div>
+            <div class="form-group">
+                <label for="student-name">Student's Name</label>
+                <input type="text" id="student-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <div id="card-element" class="stripe-element"></div>
+            <button type="submit" class="btn btn-primary">Complete Enrollment</button>
+        </form>
+        <div class="success-message">
+            Enrollment successful! Check your email for confirmation.
+        </div>
     </div>
-  </section>
 
-  <footer>
-    <p>&copy; 2024 Math Tutor Pro</p>
-    <p>Email: <a href="mailto:shryukgrandhi@gmail.com">shryukgrandhi@gmail.com</a> | Phone: <a href="tel:+18582108648">+1-858-210-8648</a></p>
-  </footer>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:shryukgrandhi@gmail.com">shryukgrandhi@gmail.com</a></p>
+                <p>Phone: <a href="tel:+18582108648">+1-858-210-8648</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

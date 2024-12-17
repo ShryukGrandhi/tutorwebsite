@@ -1,34 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment - Math Tutoring Services</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Elite Math Tutoring</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stripe-js/1.52.1/stripe.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="payment.html">Payment</a>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">Aspire Academy</a>
+            <div class="nav-links">
+                <a href="index.html#courses">Courses</a>
+                <a href="about.html">About</a>
+                <a href="payment.html">Payment</a>
+                <a href="index.html#enroll" class="btn btn-primary">Enroll Now</a>
+            </div>
+        </div>
     </nav>
-    <h1>Payment Options</h1>
-  </header>
 
-  <main>
-    <section>
-      <p>Payments for semester-long packages can be made via the following methods:</p>
-      <ul>
-        <li><strong>Venmo:</strong> @shryuk-tutoring</li>
-        <li><strong>PayPal:</strong> <a href="https://paypal.me/shryukgrandhi" target="_blank">paypal.me/shryukgrandhi</a></li>
-        <li><strong>Direct Bank Transfer:</strong> Contact us for details at <a href="mailto:shryukgrandhi@gmail.com">shryukgrandhi@gmail.com</a>.</li>
-      </ul>
+    <section class="hero">
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <h1>Payment Options</h1>
+            <p>Secure and flexible payment methods for your convenience</p>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2024 Math Tutoring Services</p>
-  </footer>
+    <div class="container">
+        <div class="payment-options">
+            <div class="payment-card">
+                <div class="payment-header">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Credit Card</h3>
+                </div>
+                <div class="payment-content">
+                    <p>Pay securely using your credit card</p>
+                    <div id="card-element" class="stripe-element"></div>
+                    <button class="btn btn-primary pay-btn">Pay Now</button>
+                </div>
+            </div>
+
+            <div class="payment-card">
+                <div class="payment-header">
+                    <i class="fab fa-paypal"></i>
+                    <h3>PayPal</h3>
+                </div>
+                <div class="payment-content">
+                    <p>Pay using your PayPal account</p>
+                    <a href="https://paypal.me/shryukgrandhi" class="btn btn-primary" target="_blank">Pay with PayPal</a>
+                </div>
+            </div>
+
+            <div class="payment-card">
+                <div class="payment-header">
+                    <i class="fas fa-university"></i>
+                    <h3>Bank Transfer</h3>
+                </div>
+                <div class="payment-content">
+                    <p>Contact us for bank transfer details</p>
+                    <a href="mailto:shryukgrandhi@gmail.com" class="btn btn-primary">Request Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:shryukgrandhi@gmail.com">shryukgrandhi@gmail.com</a></p>
+                <p>Phone: <a href="tel:+18582108648">+1-858-210-8648</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
