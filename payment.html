@@ -1,72 +1,81 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment - Elite Math Tutoring</title>
+    <title>Payment Options - Elite Math Tutoring</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/stripe-js/1.52.1/stripe.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
     <nav class="navbar">
-        <div class="nav-content">
-            <a href="index.html" class="logo">Aspire Academy</a>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Elite Math</a>
             <div class="nav-links">
                 <a href="index.html#courses">Courses</a>
                 <a href="about.html">About</a>
                 <a href="payment.html">Payment</a>
-                <a href="index.html#enroll" class="btn btn-primary">Enroll Now</a>
+                <a href="index.html#enroll" class="cta-button">Get Started</a>
             </div>
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-pattern"></div>
+    <section class="hero payment-hero">
         <div class="hero-content">
             <h1>Payment Options</h1>
             <p>Secure and flexible payment methods for your convenience</p>
         </div>
     </section>
 
-    <div class="container">
-        <div class="payment-options">
-            <div class="payment-card">
-                <div class="payment-header">
-                    <i class="fas fa-credit-card"></i>
-                    <h3>Credit Card</h3>
-                </div>
-                <div class="payment-content">
-                    <p>Pay securely using your credit card</p>
-                    <div id="card-element" class="stripe-element"></div>
-                    <button class="btn btn-primary pay-btn">Pay Now</button>
-                </div>
-            </div>
-
-            <div class="payment-card">
-                <div class="payment-header">
-                    <i class="fab fa-paypal"></i>
+    <section class="payment-options">
+        <div class="container">
+            <div class="payment-grid">
+                <div class="payment-card">
+                    <div class="payment-icon">
+                        <i class="fab fa-paypal"></i>
+                    </div>
                     <h3>PayPal</h3>
+                    <p>Quick and secure payment through PayPal</p>
+                    <a href="https://paypal.me/shryukgrandhi" class="payment-button" target="_blank">
+                        Pay with PayPal
+                    </a>
                 </div>
-                <div class="payment-content">
-                    <p>Pay using your PayPal account</p>
-                    <a href="https://paypal.me/shryukgrandhi" class="btn btn-primary" target="_blank">Pay with PayPal</a>
+
+                <div class="payment-card">
+                    <div class="payment-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Credit Card</h3>
+                    <p>Secure payment via Stripe</p>
+                    <button id="stripe-button" class="payment-button">
+                        Pay with Card
+                    </button>
+                </div>
+
+                <div class="payment-card">
+                    <div class="payment-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Bank Transfer</h3>
+                    <p>Direct bank transfer option available</p>
+                    <a href="mailto:shryukgrandhi@gmail.com" class="payment-button">
+                        Request Details
+                    </a>
                 </div>
             </div>
 
-            <div class="payment-card">
-                <div class="payment-header">
-                    <i class="fas fa-university"></i>
-                    <h3>Bank Transfer</h3>
-                </div>
-                <div class="payment-content">
-                    <p>Contact us for bank transfer details</p>
-                    <a href="mailto:shryukgrandhi@gmail.com" class="btn btn-primary">Request Details</a>
-                </div>
+            <div class="payment-info">
+                <h3>Payment Information</h3>
+                <ul>
+                    <li>All payments are processed securely</li>
+                    <li>Full semester payment is required for enrollment</li>
+                    <li>Payment plans available upon request</li>
+                    <li>Refund policy: Available within first 2 weeks</li>
+                </ul>
             </div>
         </div>
-    </div>
+    </section>
 
     <footer>
         <div class="footer-content">
