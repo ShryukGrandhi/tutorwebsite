@@ -1,17 +1,15 @@
-:root {
-    --primary: #0072ce;
-    --secondary: #00529b;
-    --accent: #ffd100;
-    --text: #333333;
-    --light-gray: #f5f7fa;
-    --white: #ffffff;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+:root {
+    --primary: #4361ee;
+    --text: #1f2937;
+    --lightgray: #f3f4f6;
+    --white: #ffffff;
 }
 
 body {
